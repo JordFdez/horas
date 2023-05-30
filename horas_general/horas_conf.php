@@ -32,7 +32,7 @@ else {
         <form action="horas_edit_save.php" method="GET">
 
             <hr><br>
-            Nombre de la obra: <br><input type="search" name="buscar_obra" list="lista_obras" value="' . $resultado['name'] . '"><br>
+            Nombre de la obra: <br><input type="search" name="buscar_obra" list="lista_obras" value="'.$resultado['name'].'"><br>
             <datalist id="lista_obras">';
         for ($i = 0; $i < $num_filas2; $i++) {
             $resultado2 = mysqli_fetch_array($consulta2);
@@ -40,13 +40,13 @@ else {
         }
             print '</datalist>
             
-            Codigo de la obra:<br> <input type="text" name="cod_obra" value="'.$resultado['code']. '" readonly><br>
-            Horas: <br><input type="text" name="horas" value="' . $resultado['hour'] . '"><br>
+            Codigo de la obra:<br> <input type="text" name="cod_obra" value="'.$resultado['code'].'" readonly><br>
+            Horas: <br><input type="text" name="horas" value="'.$resultado['hour'].'"><br>
             Hora extra: <input type="checkbox" class="extra" name="extra" value=""><br>
-            Fecha: <input type="date" name="fecha" value="' . $resultado['date'] . '"><br>
+            Fecha: <input type="date" name="fecha" value="'.$resultado['date'].'"><br>
 
             <input type="hidden" name="id_hours" value="'.$resultado['id']. '">
-            <input type="hidden" name="id_works" value="' . $resultado['id_work'] . '">
+            <input type="hidden" name="id_works" value="'.$resultado['id_work'].'">
 
             <br><hr><br>
 

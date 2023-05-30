@@ -29,34 +29,34 @@ else {
         <form action="edit_user_save.php" method="GET">
 
             <hr>
-            Nombre <br><input type="text" name="nombre" value=" ' . $resultado['name'] . '  "><br>
-            Apellido <br><input type="text" name="apellido" value=" ' . $resultado['last_name'] . '  "><br>
-            Email <br><input type="email" name="email" value=" ' . $resultado['email'] . '  "><br>
-            Contraseña <br><input type="password" name="pass" value=" ' . $resultado['password'] . '  "><br><br>
+            Nombre <br><input type="text" name="nombre" value="'.$resultado['name'].'  "><br>
+            Apellido <br><input type="text" name="apellido" value=" '.$resultado['last_name'].'  "><br>
+            Email <br><input type="email" name="email" value=" '.$resultado['email'].'  "><br>
+            Contraseña <br><input type="password" name="pass" value=" '.$resultado['password'].'  "><br><br>
             Estado <select name="estado">
-                <option> ' . $resultado['type'] . ' </option>
+                <option> '.$resultado['type'].' </option>
                 <option>ACTIVADA</option>
                 <option>NO ACTIVADA</option>
             </select><br><br>
 
-            Horario <input type="search" name="buscar_horario" list="lista_horarios" value="' . $resultado['schedule'] . '"><br>
+            Horario <input type="search" name="buscar_horario" list="lista_horarios" value="'.$resultado['schedule'].'"><br>
                 <datalist id="lista_horarios">';
         for ($i = 0; $i < $num_filas2; $i++) {
             $resultado2 = mysqli_fetch_array($consulta2);
-            print ' <option name="lista_horario" value="' . $resultado2['name'] . '">';
+            print ' <option name="lista_horario" value="'.$resultado2['name'].'">';
         }
         print '</datalist>
                 
             <br>
-            Rol <input type="search" name="buscar_rol" list="lista_roles" value="' . $resultado['rol'] . '">
+            Rol <input type="search" name="buscar_rol" list="lista_roles" value="'.$resultado['rol'].'">
             <datalist id="lista_roles">';
         for ($i = 0; $i < $num_filas3; $i++) {
             $resultado3 = mysqli_fetch_array($consulta3);
-            print ' <option name="lista_rol" value="' . $resultado3['name'] . '">';
+            print ' <option name="lista_rol" value="'.$resultado3['name'].'">';
         }
         print '</datalist>    
             <br>
-            <input type="hidden" name="id_user" value="'. $resultado['id']  . '">
+            <input type="hidden" name="id_user" value="'.$resultado['id'].'">
 
             <hr><br>
 

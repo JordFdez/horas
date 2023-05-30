@@ -50,20 +50,19 @@ else if (isset($_REQUEST['edit'])) {
         <form action="obras_edit_save.php" method="GET">
 
             <hr>
-            Codigo de la obra: <br><input type="text" name="code" value=" ' . trim($resultado['code']) . '  "><br>
-            Nombre de la obra: <br><input type="text" name="name" value=" ' . trim($resultado['name']) . '  "><br>
+            Codigo de la obra: <br><input type="text" name="code" value="'.trim($resultado['code']).'"><br>
+            Nombre de la obra: <br><input type="text" name="name" value="'.trim($resultado['name']).'"><br>
             Responsable: <br><input type="search" name="buscar_email" list="lista_emails" value="'.$resultado['email'].'"><br>
             <datalist id="lista_emails">';
     for ($i = 0; $i < $num_filas2; $i++) {
         $resultado2 = mysqli_fetch_array($consulta2);
-        print ' <option name="lista_email" value="' . $resultado2['email'] . '">';
+        print ' <option name="lista_email" value="'.$resultado2['email'].'">';
     }
     print
         '</datalist> <br>
             
             <input type="hidden" name="id" value="' . $resultado['id']  . '">
 
-            <hr><br>
 
             <input type="submit" class="boton" name="save" value="Guardar">
             <input type="submit" class="boton" name="close" value="Cerrar">

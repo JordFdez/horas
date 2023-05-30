@@ -28,7 +28,7 @@ if(isset($_REQUEST['edit'])){
             <hr><br>
             Estado: <input type="text" name="estado" value="'  . $resultado['estado'] . '" readonly><br><br>
             
-            Nombre de obra: <input type="search" name="buscar_obra" list="lista_obras" value=" '. $resultado['nombre']. '">
+            Nombre de obra: <input type="search" name="buscar_obra" list="lista_obras" value="'.$resultado['nombre'].'">
             <datalist id="lista_obras">';
         for ($i = 0; $i < $num_filas4; $i++) {
             $resultado4 = mysqli_fetch_array($consulta4);
@@ -38,7 +38,7 @@ if(isset($_REQUEST['edit'])){
             '</datalist> <br><br>
             
             Tipo de gasto: <select name="tipo_gasto" >
-                <option value="' . $resultado['tipo_gasto'] . '" >'; echo $resultado['tipo_gasto']; print '</option>
+                <option value="'.$resultado['tipo_gasto'].'" >';$resultado['tipo_gasto']; print '</option>
                 <option value="DIETA">DIETA</option>
                 <option value="KM">KM</option>
                 <option value="VARIOS">VARIOS</option>

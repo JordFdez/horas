@@ -28,11 +28,11 @@ if(isset($_REQUEST['edit'])){
             <hr><br>
             Estado: <input type="text" name="estado" value="'  . $resultado['estado'] . '" readonly><br><br>
             
-            Nombre de obra: <input type="search" name="buscar_obra" list="lista_obras" value=" '. $resultado['nombre']. '">
+            Nombre de obra: <input type="search" name="buscar_obra" list="lista_obras" value="'.$resultado['nombre'].'">
             <datalist id="lista_obras">';
         for ($i = 0; $i < $num_filas4; $i++) {
             $resultado4 = mysqli_fetch_array($consulta4);
-            print ' <option name="lista_obras" value="' . $resultado4['name'] . '">';
+            print ' <option name="lista_obras" value="'.$resultado4['name'].'">';
         }
         print
         '</datalist> <br><br>
@@ -43,11 +43,11 @@ if(isset($_REQUEST['edit'])){
                 <option value="KM">KM</option>
                 <option value="VARIOS">VARIOS</option>
             </select><br><br>
-            Importe: <input type="text" name="importe" value="' . $resultado['importe'] . '"> <br>
+            Importe: <input type="text" name="importe" value="'.$resultado['importe'].'"> <br>
             <input type="file" name="miinput" class="tamaño" id="miinput" disabled value="'.$resultado['imagen_gasto'].'">
             <br><textarea name="comentario" rows="8" cols="40" placeholder="Añada comentario sobre los gastos varios, km, dieta...">'; echo $resultado['comentario']; print '</textarea><br>
             
-            <input type="hidden" name="id_gasto" value="' . $resultado['id']  . '">
+            <input type="hidden" name="id_gasto" value="'.$resultado['id'].'">
 
             <br><hr><br>
 
