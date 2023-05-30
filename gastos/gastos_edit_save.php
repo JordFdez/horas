@@ -35,13 +35,13 @@ else {
             $consulta = mysqli_query($conn, $query) or die("Fallo en la consulta");
                 if ($consulta) {
                     echo "<script language='javascript'>
-                alert('¡¡ Gasto añadido con exito !!');
+                alert('¡¡ Gasto editado con exito !!');
                 window.location.replace('./gastos.php');
                 </script>";
                 } 
                 else {
                     echo "<script language='javascript'>
-                alert('¡¡ Error al añadir gasto !!');
+                alert('¡¡ Error al editar gasto !!');
                 window.location.replace('./add_gastos.php');
                 </script>";
                 }
@@ -51,13 +51,13 @@ else {
             $consulta2 = mysqli_query($conn, $query2) or die("Fallo en la consulta");
             if ($consulta2) {
                 echo "<script language='javascript'>
-                alert('¡¡ Gasto añadido con exito !!');
+                alert('¡¡ Gasto editado con exito !!');
                 window.location.replace('./gastos.php');
                 </script>";
             } 
             else {
                 echo "<script language='javascript'>
-                alert('¡¡ Error al añadir gasto !!');
+                alert('¡¡ Error al editar gasto !!');
                 window.location.replace('./add_gastos.php');
                 </script>";
             }
@@ -80,12 +80,12 @@ else {
                             $consulta2 = mysqli_query($conn, $query2) or die("Fallo en la consulta");
                             if ($consulta2) {
                                 echo "<script language='javascript'>
-                                    alert('¡¡ Gasto añadido con exito !!');
+                                    alert('¡¡ Gasto editado con exito !!');
                                     window.location.replace('./gastos.php');
                                     </script>";
                             } else {
                                 echo "<script language='javascript'>
-                                    alert('¡¡ Error al añadir gasto !!');
+                                    alert('¡¡ Error al editar gasto !!');
                                     window.location.replace('./add_gastos.php');
                                     </script>";
                             }

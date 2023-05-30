@@ -25,7 +25,7 @@ else {
                 </script>";
             } else {
                 echo "<script language='javascript'>
-                alert('¡¡ Error al añadir gasto, km !!');
+                alert('¡¡ Error al editar gasto !!');
                 window.location.replace('./gastos.php');
                 </script>";
             }
@@ -40,7 +40,7 @@ else {
                 </script>";
             } else {
                 echo "<script language='javascript'>
-                alert('¡¡ Error al añadir gasto, dieta !!');
+                alert('¡¡ Error al editar gasto !!');
                 window.location.replace('./gastos.php');
                 </script>";
             }
@@ -55,7 +55,7 @@ else {
                 </script>";
             } else {
                 echo "<script language='javascript'>
-                alert('¡¡ Error al añadir gasto, varios !!');
+                alert('¡¡ Error al editar gasto !!');
                 window.location.replace('./gastos.php');
                 </script>";
             }
