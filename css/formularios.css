@@ -11,12 +11,12 @@ body {
 .tabla_estilo {
     width: 60%;
     margin-left: 20%;
-    margin-top: -4%;
+    margin-top: -5%;
     border-radius: 5px;
     padding: 2%;
     border-radius: 1rem;
     display:inherit;
-    max-height: 80vh;
+    max-height: 85vh;
     background-color: white;
 }
 .tabla_estilo span {
