@@ -36,7 +36,7 @@ if (!$conn) {
             Tipo de gasto: <select name="tipo_gasto" id="tipo_gasto">
                 <option value="DIETA">DIETA</option>
                 <option value="KM">KM</option>
-                <option value="LOCOMOCION">LOCOMOCION</option>
+                 <!-- <option value="LOCOMOCION">LOCOMOCION</option> -->
                 <option value="VARIOS">VARIOS</option>
             </select name="tipo_gasto"><br><br>
             <input type="text" name="importe" placeholder="Valor"><br>
@@ -59,3 +59,5 @@ if (!$conn) {
 
 </html>';
 }
+
+?>

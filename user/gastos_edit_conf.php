@@ -32,7 +32,7 @@ if(isset($_REQUEST['edit'])){
             <datalist id="lista_obras">';
         for ($i = 0; $i < $num_filas4; $i++) {
             $resultado4 = mysqli_fetch_array($consulta4);
-            print ' <option name="lista_obras" value="' . $resultado4['name'] . '">';
+            print ' <option name="lista_obras" value="'.$resultado4['name'].'">';
         }
         print
             '</datalist> <br><br>

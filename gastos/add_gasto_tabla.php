@@ -83,8 +83,8 @@ else {
                     $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
                     // solo formato especifico
-                    // $allowedTypes = array('jpg', 'jpeg', 'png', 'gif', 'svg', 'jfif', 'psd', 'tiff', 'bmp', 'heif');
-                    // if (in_array($fileType, $allowedTypes)) {
+                    $allowedTypes = array('jpg', 'jpeg', 'png', 'gif', 'svg', 'jfif', 'psd', 'tiff', 'bmp', 'heif');
+                    if (in_array($fileType, $allowedTypes)) {
                         // subida imagen al servidor
                         if (move_uploaded_file($_FILES['miinput']['tmp_name'], $targetFilePath)) {
                             $query2 = "insert into gastos (id, estado, nombre, work_id, tipo_gasto, importe, fecha, comentario, user_id, imagen_gasto, alta_gasto) values (NULL, 'NO APROBADA', '$nombre', (select id from works where name='$nombre'), '$gasto', $importe, '$fecha', '$comentario', (select id from users where id=$id), '$fileName', NOW());";
@@ -106,12 +106,12 @@ else {
                                 window.location.replace('./add_gastos.php');
                                 </script>";
                         }
-                    // } else {
-                    //     echo "<script language='javascript'>
-                    //         alert('¡¡ Tipo de archivo no permitido por la extension, solo se permite JPG, JPEG, PNG, GIF, SVG, JFIF, PSD, TIFF, BMP, HEIF !!');
-                    //         window.location.replace('./add_gastos.php');
-                    //         </script>";
-                    // }
+                    } else {
+                        echo "<script language='javascript'>
+                            alert('¡¡ Tipo de archivo no permitido por la extension, solo se permite JPG, JPEG, PNG, GIF, SVG, JFIF, PSD, TIFF, BMP, HEIF !!');
+                            window.location.replace('./add_gastos.php');
+                            </script>";
+                    }
                 } else {
                     echo "<script language='javascript'>
                         alert('¡¡ Debe seleccionar una imagen !!');

@@ -2,11 +2,12 @@
 
 session_start();
 include("../include/bbddconexion.php");
+$id_user = $_SESSION['id'];
 
 if (!$conn) {
     die("Conexion fallida:" . mysqli_connect_error());
 } else {
-    $query = "select gastos.id, gastos.alta_gasto, gastos.estado, users.name as 'user_name', users.last_name, users.email, users.rol_id, works.name as 'work_name', works.code, gastos.fecha, gastos.tipo_gasto, gastos.importe, gastos.comentario, gastos.who_approve, gastos.imagen_gasto from gastos, users, works where users.id=gastos.user_id and gastos.work_id=works.id";
+    $query = "select gastos.id, gastos.estado, gastos.alta_gasto, users.name as 'user_name', users.rol_id, users.last_name, users.email, works.name as 'work_name', works.code, gastos.fecha, gastos.tipo_gasto, gastos.importe, gastos.comentario, gastos.who_approve, gastos.imagen_gasto from gastos, users, works where users.id=gastos.user_id and gastos.work_id=works.id and gastos.user_id=$id_user";
     $consulta = mysqli_query($conn, $query) or die("Fallo en la consulta");
     $num_filas = mysqli_num_rows($consulta);
 }
@@ -28,7 +29,9 @@ maximum-scale=1, user-scalable=0" name="viewport" />
 
     <?php include("../include/tabla.php");
     include("../include/tabla2.php");
-    include("../include/menu.php"); ?>
+    include("../include/menu.php");
+    include("../include/eliminar.php");
+    ?>
 
 </head>
 
@@ -38,22 +41,13 @@ maximum-scale=1, user-scalable=0" name="viewport" />
             <span>Pages / <b>Gastos</b></span>
 
             <!--include menu -->
-            <?php include("../template/menu.php"); ?>
+            <?php include("../template/menu_user.php"); ?>
             <br><br>
             <div class="medio">
                 <nav class="medio_ajuste">
-
                     <a class="item_a" href="./add_gastos.php">
                         <div class="items">
-                            <span class="item_span"> Añadir Gastos
-                            </span>
-                        </div>
-                    </a>
-
-                    <a class="item_a" href="./mis_gastos.php">
-                        <div class="items">
-                            <span class="item_span"> Mis Gastos
-                            </span>
+                            <span class="item_span"> Añadir Gastos </span>
                         </div>
                     </a>
 
@@ -101,6 +95,7 @@ maximum-scale=1, user-scalable=0" name="viewport" />
                         <th>Filter..</th>
                         <th>Filter..</th>
                         <th>Filter..</th>
+
                     </tr>
                 </tfoot>
                 <tbody>
@@ -151,8 +146,7 @@ maximum-scale=1, user-scalable=0" name="viewport" />
                             <td><form action='gastos_imagen.php' method='GET'><input name='id_gastos' type='hidden' value=" . $resultado['id'] . ">
                             <button class='no_boton2' name='imagen'><img src='../img_gastos/" . $resultado['imagen_gasto'] . "' heigth=60px width=60px></button></form></td>
                         <td></td></tr>";
-                        }
-                        else if ($resultado['estado'] == "APROBADA" && $resultado['imagen_gasto'] != "") {
+                        } else if ($resultado['estado'] == "APROBADA" && $resultado['imagen_gasto'] != "") {
                             print "<tr><td>" . $resultado['alta_gasto'] . "</td><td>" . $resultado['fecha'] . "</td><td class='" . $resultado['estado'] . "'>" . $resultado['estado'] . " </td><td>" . $resultado['user_name'] . "</td><td> " . $resultado['last_name'] . "</td><td> " . $resultado['email'] . "</td><td>" . $resultado['work_name'] . "</td><td>" . $resultado['code'] . "</td><td>" . $resultado['tipo_gasto'] . "</td><td>" . $resultado['importe'] . "</td><td>" . $resultado['comentario'] . "</td><td>" . $resultado['who_approve'] . "</td>
                             <td><form action='gastos_imagen.php' method='GET'><input name='id_gastos' type='hidden' value=" . $resultado['id'] . ">
                             <button class='no_boton2' name='imagen'><img src='../img_gastos/" . $resultado['imagen_gasto'] . "' heigth=60px width=60px></button></form></td>

@@ -145,9 +145,9 @@ $(document).ready(function () {
 
                 $('input', this.footer()).on('keyup change', function () {
                     if ($(this).closest('th').hasClass('date')) {
-                                console.log('Filtering dates..');
-                                table.draw();
-                            }
+                        console.log('Filtering dates..');
+                        table.draw();
+                    }
                     else if ($(this).closest('th').hasClass('alta_gasto')){
                         console.log('Filtering dates..');
                         table.draw();
