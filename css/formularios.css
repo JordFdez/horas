@@ -1,0 +1,99 @@
+body {
+    background-color: #dfdada;
+    align-items: center;
+    justify-content: center;
+}
+.fondo_naranja {
+    background-color: #e69019;
+    max-height: 30vh;
+
+}
+.tabla_estilo {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: -4%;
+    border-radius: 5px;
+    padding: 2%;
+    border-radius: 1rem;
+    display:inherit;
+    max-height: 80vh;
+    background-color: white;
+}
+.tabla_estilo span {
+    font-weight: 700;
+    font-size: 18pt;
+    color: #646464;
+    margin-left: 33%;
+    
+}
+input{
+    margin-bottom: 2%;
+    width: 70%;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 1%;  
+    
+}
+form{
+
+    text-align: center;
+}
+
+.boton{
+    margin-bottom: 2%;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e69019;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    font-size: 100%;
+}
+
+.placeholder{
+    color: black;
+    font-family: sans-serif;
+}
+
+select{
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 1%;
+    border-color: #535353;
+}
+
+.boton:hover{
+    background-color: rgb(196, 125, 3);
+}
+
+textarea{
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.extra{
+    width: 18px;
+    height: 18px;
+}
+
+.horario{
+    width: 10%;
+}
+
+.horario_name{
+    width: 50%;
+}
+.imagen_gasto {
+    width: 800px;
+    height: 500px;
+    background-color: #ffffff;
+}
+
+.imagen_gasto img {
+    width: auto;
+    max-width: 800px;
+    height: auto;
+    max-height: 500px;
+}

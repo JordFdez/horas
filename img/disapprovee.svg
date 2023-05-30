@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<svg 
+class="w-7 h-7"
+viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #d2ddff;
+            }
+
+            .cls-2 {
+                fill: #4c241d;
+            }
+
+            .cls-3 {
+                fill: #fc8c29;
+            }
+
+            .cls-3,
+            .cls-4,
+            .cls-5,
+            .cls-6 {
+                stroke: #4c241d;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 2px;
+            }
+
+            .cls-4 {
+                fill: #e66353;
+            }
+
+            .cls-5 {
+                fill: #fff;
+            }
+
+            .cls-6 {
+                fill: none;
+            }
+        </style>
+    </defs>
+    <g id="negative-sign">
+        <circle class="cls-3" cx="33" cy="35" r="25" />
+        <circle class="cls-4" cx="33" cy="35" r="20" />
+        <circle class="cls-5" cx="33" cy="35" r="17" />
+      
+        <polygon class="cls-4"
+            points="40.54 30 37.71 27.17 32.96 31.92 28.21 27.17 25.38 30 30.13 34.75 25.38 39.5 28.21 42.33 32.96 37.58 37.71 42.33 40.54 39.5 35.79 34.75 40.54 30" />
+    </g>
+</svg>

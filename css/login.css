@@ -1,0 +1,100 @@
+html{
+    -webkit-text-size-adjust: 100%;
+}
+.card-header{
+    border: none;
+    background-color: none;
+
+}
+.card-header img{
+    margin-left: 25%;
+    height: 4rem;
+    max-width: none;
+    display: block;
+    vertical-align: middle;
+
+}
+
+.card{
+    border-radius: 1rem;
+    max-width: none;
+    z-index: 3;
+}
+
+.row{
+    align-items: center;
+}
+
+.fondo_login{
+    background-image: url(https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg);
+    background-position: top;
+    background-size: cover;
+    border-radius: 0.75rem;
+    padding-bottom: 14rem;
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    opacity: .6;
+    position: relative;
+    z-index: 1;
+}
+
+.opacidad{
+    z-index: 2;
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.75rem;
+    margin: 1rem;
+
+}
+
+.baum{
+    font-weight: 700;
+    width: auto;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: rgb(0, 0, 0);
+    z-index: 3;
+
+}
+
+.container{
+    margin-top: -20%;
+}
+
+.size_texto_login{
+    width: 80%;
+}
+
+.texto_login{
+    
+    text-align: center;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    flex-shrink: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    margin-top: 5%;
+    color: rgb(0, 0, 0);
+    z-index: 3;
+
+}
+#boton{
+    margin-left: 20%;
+    text-align: center;
+    width: 80%;
+}
+
+#boton1{
+    width: 100%;
+}
+
+.copy{
+    color:rgb(79, 88, 102);
+    font-size: 12pt;
+    font-weight: 500;
+    text-align: center;
+
+}
