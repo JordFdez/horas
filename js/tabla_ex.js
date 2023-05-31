@@ -21,6 +21,7 @@
       );
     }
 
+
 $(document).ready(function () {
 
     $('#mydatatable tfoot th').each(function () {
@@ -135,7 +136,8 @@ $(document).ready(function () {
             "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
         
         },
-        
+        stateSave: true, //mantener numero de paginacion (aunque cierre sesion)
+        stateDuration: 60 * 60 * 1,
         "order": [
             [0, "desc"]
         ],
@@ -187,3 +189,7 @@ $(document).ready(function () {
     });
 }
 );
+
+$(".logout").on("click", function(){
+  $('#mydatatable').DataTable().state.clear();
+});

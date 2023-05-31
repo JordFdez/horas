@@ -85,6 +85,8 @@ else {
                     // solo formato especifico
                     $allowedTypes = array('jpg', 'jpeg', 'png', 'gif', 'svg', 'jfif', 'psd', 'tiff', 'bmp', 'heif');
                     if (in_array($fileType, $allowedTypes)) {
+                        $nombreCompleto = $targetDir . $fileName;
+
                         // subida imagen al servidor
                         if (move_uploaded_file($_FILES['miinput']['tmp_name'], $targetFilePath)) {
                             $query2 = "insert into gastos (id, estado, nombre, work_id, tipo_gasto, importe, fecha, comentario, user_id, imagen_gasto, alta_gasto) values (NULL, 'NO APROBADA', '$nombre', (select id from works where name='$nombre'), '$gasto', $importe, '$fecha', '$comentario', (select id from users where id=$id), '$fileName', NOW());";

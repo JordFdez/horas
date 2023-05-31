@@ -5,7 +5,7 @@
     <a></a><a></a><a></a><a></a><a></a><a></a><br><br><br><br><br>
     <a></a><a></a><a></a><a></a><a></a><a></a><a></a><a>
         <a><i class="fa fa-user" style="font-size:24px;color:#818181"></i> <?php echo $_SESSION['name']; ?></a>
-        <a href="../logout.php"><img src="../img/salir1.png" height="30px" width="30px"> Cerrar Sesión</a>
+        <a href="../logout.php" id="logout"><img src="../img/salir1.png" height="30px" width="30px"> Cerrar Sesión</a>
 </div>
 
 <div class="nav_der">
